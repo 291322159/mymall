@@ -7,11 +7,9 @@ const Home = () => import('../views/home/Home')
 const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
 const Profile = () => import('../views/profile/Profile')
+const Detail = () => import('../views/detail/Detail')
 
-const originalPush = Router.prototype.push
-Router.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
-}
+
 
 Vue.use(Router)
 
@@ -53,6 +51,14 @@ export default new Router({
     	meta: {
 	    	title: '我的'
 	    },
+    },
+    {
+    	path: '/detail/:iid',
+    	name: '商品详情',
+    	component: Detail,
+    	meta: {
+	    	title: '商品详情'
+	    }
     }
   ],
 //HTML5 的 history 模式,去掉链接的 # 号

@@ -1,5 +1,5 @@
 <template>
-	<tab-bar>
+	<tab-bar class="maintabbar">
   		<tab-bar-item path="/home" activeColor="#ff5777">
   			<img slot="item-icon" src="@/assets/images/tabbar/home.png" alt="" />
   			<img slot="item-icon-active" src="@/assets/images/tabbar/home_active.png" alt="" />
@@ -38,4 +38,7 @@ export default {
 </script>
 
 <style>
+	.maintabbar{
+		z-index: 999;
+	}
 </style>
