@@ -35,7 +35,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.back img {
 		margin-top: 11px;
 	}
