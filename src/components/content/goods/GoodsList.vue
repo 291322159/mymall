@@ -15,7 +15,6 @@
 		},
 		props: {
 			goods: {
-				type:	Array,
 				default() {
 					return []
 				}
@@ -24,7 +23,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.goods {
     display: flex;
     flex-wrap: wrap;

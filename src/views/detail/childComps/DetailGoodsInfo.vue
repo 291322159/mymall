@@ -5,7 +5,7 @@
       <div class="desc">{{detailInfo.desc}}</div>
       <div class="end"></div>
     </div>
-    <div v-for="item in detailInfo.detailImage">
+    <div v-for="(item, index) in detailInfo.detailImage" :key="index" >
     	<div class="info-key">{{item.key}}</div>
 	    <div class="info-list">
 	      <img v-for="(item, index) in item.list" 

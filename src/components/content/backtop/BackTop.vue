@@ -11,7 +11,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.backtop {
 		position: fixed;
 		bottom: 55px;

@@ -91,20 +91,21 @@
 		mounted() {
 //			图片加载完成的时间监听
 			const refresh = debounce(this.$refs.scroll.refresh, 20)
-			this.$bus.$on('itemImgLoad', () => {
+			this.$bus.$on('homeItemImgLoad', () => {
 				refresh()
 			})
 
 		},
 		activated() {
-			this.$refs.scroll.scrollTo(0, this.saveY, 0)
+			this.$refs.scroll.scrollTo(0, this.saveY)
 			this.$refs.scroll.refresh()
 		},
 		deactivated() {
+//			保存Y值
 			this.saveY = this.$refs.scroll.getScrollY()
 		},
+		
 		methods: {
-
 //			事件监听相关方法
 			tabClick(index) {
 				switch (index) {
